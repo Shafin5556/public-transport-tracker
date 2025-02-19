@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver - Bus Tracking</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="{{ url_for('static', filename='driver.js') }}"></script>
+</head>
+<body>
+    <h2>Driver Mode</h2>
+    <button onclick="startDriverMode()">Start Sharing Location</button>
+    <button id="stopDriverMode" onclick="stopDriverMode()" style="display: none;">Stop Sharing Location</button>
+    
+    <p id="driverMessage" style="display: none;">Your location is being shared...</p>
+    <p id="driverStatus" style="display:none;">
+        Last Location: <span id="lastLocation">Waiting...</span><br>
+        Last Updated: <span id="lastUpdated">Never</span><br>
+        Address: <span id="lastAddress">Fetching...</span>
+    </p>
+    
+</body>
+</html>
